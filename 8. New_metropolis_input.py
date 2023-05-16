@@ -1,12 +1,11 @@
-
 import json
 import zstandard as zstd
 import math
 import pandas as pd
 import numpy as np
-
 from tqdm import tqdm
 import time
+
 start = time.time()
 
 #read matching file
@@ -27,10 +26,7 @@ for x in i_agents:
         input_01.append(my_list)
     p += 1
 
-
 json_string = json.dumps(input_01)
-
 # Write the JSON formatted string to a file
 with open('new_metropolis_input.json', 'w') as file:
     file.write(json_string)
-
