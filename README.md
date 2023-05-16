@@ -1,6 +1,6 @@
 **# METROPOLIS-Ridesharing**
 
-This repository contains script files for ridesharing in a simulaton of Metropolis for the any network.
+This repository contains script files for ridesharing in a Metropolis simulaton for the any network.
 
 **How to Start**
 
