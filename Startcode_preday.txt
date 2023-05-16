@@ -1,0 +1,2 @@
+cd Desktop\Metropolis software\4.1\execs>compute_choices.exe --agents agents_preday.json --road-network network.json --parameters parameters1.json --weights weight_results.json.zst
+
