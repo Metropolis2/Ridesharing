@@ -5,8 +5,8 @@ This repository contains script files for ridesharing in a simulaton of Metropol
 **How to Start**
 
 **Step 1:**
-  Run the metropolis software using agents input file and get the output files
-  Make sure that all input output files and software everything are in the same folder
+* Run the metropolis software using agents input file and get the output files
+* Make sure that all input output files and software everything are in the same folder
 
 **Step 2:**
   Run 1.Identify_matches.py 
