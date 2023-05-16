@@ -1,1 +1,1 @@
-cd Desktop\Metropolis software\Sioux falls>metropolis.exe --agents agents.json --road-network network.json --parameters parameters.json
+metropolis.exe --agents agents.json --road-network network.json --parameters parameters.json
