@@ -32,7 +32,7 @@ This repository contains script files for ridesharing in a simulaton of Metropol
 * Also it will compute the passenger travel and schedule delay cost for all detour scenarios
   
 **Step 7:**
- * Run 5.Unique_to_full.py
+ * Run 5.Unique_to_all_agents.py
  * It will change all the unique driver and passenger OD pairs to again all possible matching scenarios
 
 **Step 8:**
