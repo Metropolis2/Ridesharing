@@ -14,7 +14,7 @@ Step 2:
   After that it will find the possible matches on the criteris that matching utility in the case of free flow case should be higher then the utility of agents traveling alone (Driver and passenger pair)
   
 Step 3:
-  Run the second code 2.Cost computation.py 
+  Run the second code 2.Detour_scenarios.py 
   First it will find all the unique driver passenger OD pairs
   It will create all four detour scenarios using driver and passenger OD pairs.
   
