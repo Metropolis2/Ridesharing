@@ -1,12 +1,12 @@
-# METROPOLIS-Ridesharing
+**# METROPOLIS-Ridesharing**
 
 This repository contains script files for ridesharing in a simulaton of Metropolis for the any network.
 
 **How to Start**
 
 **Step 1:**
-  - Run the metropolis software using agents input file and get the output files.
-  - Make sure that all input output files and software everything are in the same folder
+  Run the metropolis software using agents input file and get the output files
+  Make sure that all input output files and software everything are in the same folder
 
 **Step 2:**
   Run 1.Identify_matches.py 
@@ -16,7 +16,7 @@ This repository contains script files for ridesharing in a simulaton of Metropol
 **Step 3:**
   Run 2.Detour_scenarios.py 
   First it will find all the unique driver passenger OD pairs
-  It will create all four detour scenarios using driver and passenger OD pairs.
+  It will create all four detour scenarios using driver and passenger OD pairs
   
 **Step 4:**
   Run 3.Preday_input.py 
