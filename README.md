@@ -27,4 +27,10 @@ Step 5:
   use startcode_preday.txt to run the preday input file
 
 Step 6:
+  Run the code 4.After_preday.py
+  it will read driver expected utility from the preday output file for all four detour scenarios
+  Also it will compute the passenger travel and schedule delay cost for all detour scenarios
   
+Step 7:
+   Run the code 5.Unique_to_full.py
+   It will change all the unique driver and passenger OD pairs to again all possible matching scenarios
