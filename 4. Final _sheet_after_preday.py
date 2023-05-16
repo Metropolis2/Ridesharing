@@ -5,9 +5,6 @@ import zstandard as zstd
 
 start = time.time()
 
-# a = open('agents_preday.json')
-# input_preday = json.load(a)
-
 def get_agent_results():
     dctx = zstd.ZstdDecompressor()
     with open('agent_results.json.zst', "br") as f:
@@ -74,18 +71,15 @@ for index,  df in df1.iterrows():
         #print(x)
     #break
 
-
 df1["P_car_time_cost1"] = (df1["passenger arrival1"] - df1["passenger departure1"]) * (- df1["Alpha"])
 df1["P_car_time_cost2"] = (df1["passenger arrival2"] - df1["passenger departure2"]) * (- df1["Alpha"])
 df1["P_car_time_cost3"] = (df1["passenger arrival3"] - df1["passenger departure3"]) * (- df1["Alpha"])
 df1["P_car_time_cost4"] = (df1["passenger arrival4"] - df1["passenger departure4"]) * (- df1["Alpha"])
 
-
 df1['schedule delay cost1'] = df1.apply(lambda row: (row['t_star_high'] - (row['passenger arrival1'] + (row['walk cost1']*240)))*row['Beta'] if (row['passenger arrival1']  + (row['walk cost1']*240)) <= row['t_star_high'] else ((row['passenger arrival1']  + (row['walk cost1']*240)) - row['t_star_high'])*row['Gamma'], axis=1)
 df1['schedule delay cost2'] = df1.apply(lambda row: (row['t_star_high'] - (row['passenger arrival2'] + (row['walk cost2']*240)))*row['Beta'] if (row['passenger arrival2'] + (row['walk cost2']*240)) <= row['t_star_high'] else ((row['passenger arrival2'] + (row['walk cost2']*240)) - row['t_star_high'])*row['Gamma'], axis=1)
 df1['schedule delay cost3'] = df1.apply(lambda row: (row['t_star_high'] - (row['passenger arrival3'] + (row['walk cost3']*240)))*row['Beta'] if (row['passenger arrival3'] + (row['walk cost3']*240)) <= row['t_star_high'] else ((row['passenger arrival3'] + (row['walk cost3']*240))- row['t_star_high'])*row['Gamma'], axis=1)
 df1['schedule delay cost4'] = df1.apply(lambda row: (row['t_star_high'] - (row['passenger arrival4'] + (row['walk cost4']*240)))*row['Beta'] if (row['passenger arrival4'] + (row['walk cost4']*240)) <= row['t_star_high'] else ((row['passenger arrival4'] + (row['walk cost4']*240)) - row['t_star_high'])*row['Gamma'], axis=1)
-
 
 df1["P_T_cost1"] = df1["P_car_time_cost1"] + df1['walk cost1'] + df1['schedule delay cost1']
 df1["P_T_cost2"] =  df1["P_car_time_cost2"] + df1['walk cost2'] + df1['schedule delay cost2']
@@ -94,7 +88,5 @@ df1["P_T_cost4"] =  df1["P_car_time_cost4"] + df1['walk cost4'] + df1['schedule 
 
 df1.to_csv("Final Match Matrix_01.csv", index=False)
 
-
 print("% s seconds" % (time.time() - start))  
-
 
